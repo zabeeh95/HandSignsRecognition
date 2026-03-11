@@ -14,7 +14,7 @@ import cv2
 
 hands = mp.solutions.hands.Hands(static_image_mode=True, min_detection_confidence=0.3)
 
-DATA_DIR = './data'
+DATA_DIR = './data/dataset'
 
 """matplotlib showing hand signs"""
 # import matplotlib.pyplot as plt
@@ -71,7 +71,7 @@ for dir_ in os.listdir(DATA_DIR):
             data.append(data_aux)
             labels.append(dir_)
 
-with open('data.pickle', 'wb') as file:
+with open('data\data.pickle', 'wb') as file:
     pickle.dump({'data': data, 'labels': labels}, file)
 
 
